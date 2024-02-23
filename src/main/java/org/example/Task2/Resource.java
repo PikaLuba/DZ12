@@ -55,12 +55,12 @@ public class Resource {
             //
         } else {
             while (sharedResource.size() == capacity) {
-                // wait();
+                 wait();
             }
             sharedResource.add(item);
             str[item-1] = String.valueOf(item);
             //   System.out.println(item);
-            //   notify();
+               notify();
         }
     }
 
